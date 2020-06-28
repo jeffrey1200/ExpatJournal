@@ -1,0 +1,31 @@
+{
+  "name": "ExpatJournal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrey1200/ExpatJournal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffrey1200/ExpatJournal/issues"
+  },
+  "homepage": "https://github.com/jeffrey1200/ExpatJournal#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "knex": "^0.21.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
