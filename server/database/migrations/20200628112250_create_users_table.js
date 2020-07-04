@@ -7,6 +7,7 @@ exports.up = function (knex) {
     tbl.string("username", 255).notNullable().unique();
     tbl.string("email", 255).notNullable().unique();
     tbl.string("password", 255).notNullable();
+    tbl.text("bio", 300);
     tbl.integer("posts").defaultTo(0);
     tbl.integer("followers").defaultTo(0);
     tbl.integer("following").defaultTo(0);
@@ -14,5 +15,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropTableIfExist("Users");
+  return knex.schema.dropTableIfExists("Users");
 };

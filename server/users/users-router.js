@@ -23,6 +23,16 @@ userRouter.get("/:id", checkId, (req, res) => {
   res.status(200).json(user);
 });
 
+userRouter.get("/:id/experiences", checkId, (req, res) => {
+  const { id } = req.params;
+
+  Users.getUserExperiences(id)
+    .then((UserExperiences) => {
+      res.status(200).json(UserExperiences);
+    })
+    .catch((err) => err);
+});
+
 userRouter.put("/:id", checkId, (req, res) => {
   const { id } = req.params;
   const body = req.body;

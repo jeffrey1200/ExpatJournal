@@ -6,10 +6,15 @@ module.exports = {
   addUser,
   update,
   remove,
+  getUserExperiences,
 };
 
 function getAll() {
   return db("Users").select("*");
+}
+
+function getUserExperiences(id) {
+  return db("Experiences").where({ user_id: id });
 }
 
 function findUserById(id) {

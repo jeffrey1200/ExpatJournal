@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const authRouter = require("../auth/auth-router");
 const userRouter = require("../users/users-router");
+const experiencesRouter = require("../experiences/experiences-router");
 // initializing server
 
 const server = express();
@@ -15,6 +16,7 @@ server.use(cors());
 server.use(express.json());
 server.use("/auth/", authRouter);
 server.use("/users/", userRouter);
+server.use("/experiences/", experiencesRouter);
 
 server.get("/", (req, res) => {
   res.status(200).json({ message: "server is running!" });
